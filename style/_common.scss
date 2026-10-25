@@ -1,0 +1,283 @@
+.banner {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    // transform: translateY(-50%);
+    @media (min-width: 992px) {
+      max-height: 26vw;
+      // overflow: hidden;
+    }
+  }
+}
+.tit_unit {
+  color: $color_sec;
+  font-size: clamp(18px, 2vw, 24px);
+  .tit_en {
+    margin-left: 6px;
+    color: $color_sec;
+  }
+}
+.tit_en {
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+}
+
+.color_sec {
+  color: $color_sec !important;
+  *{  color: $color_sec !important;}
+}
+
+.btn_more {
+  width: 114px;
+  border: 1px solid $color_main;
+  color: $color_main;
+  background-color: #fff;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 4px;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $color_main;
+    color: #fff;
+    i {
+      color: #fff;
+    }
+  }
+  i {
+    color: $color_main;
+  }
+  &.grey {
+    width: auto;
+    padding: 12px;
+    color: $color_grey_1;
+    background-color: transparent;
+    border: 1px solid $color_grey_1;
+    i {
+      color: $color_grey_1;
+    }
+    &:hover {
+      background-color: $color_grey_1;
+      color: #fff;
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.box_link {
+  color: $color_grey_1;
+  display: flex;
+  justify-content: center;
+  gap: 4px 8px;
+  list-style: none;
+  font-size: 14px;
+  margin-bottom: clamp(24px, 3vw, 40px);
+  flex-wrap: wrap;
+  line-height: 1.25;
+  padding-left: 0;
+  * {
+    color: $color_grey_1;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+}
+.page_tit {
+  font-size: clamp(22px, 2vw, 28px);
+  letter-spacing: 8px;
+  text-align: center;
+  &.short {
+    letter-spacing: 0;
+    text-align: left;
+  }
+  + p {
+    font-size: clamp(16px, 1.25vw, 20px);
+  }
+}
+
+.hr {
+  color: #bbb;
+  margin-top: clamp(20px, 3vw, 40px);
+  margin-bottom: clamp(20px, 3vw, 40px);
+}
+.page_unit_tit {
+  text-align: center;
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: #000;
+}
+
+.banner {
+  .area_text {
+    background-color: $color_grey_2;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    p {
+      letter-spacing: 0.5px;
+      &:first-child {
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// icon
+.gg-arrow-right {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+}
+.gg-arrow-right::after,
+.gg-arrow-right::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  right: 3px;
+}
+.gg-arrow-right::after {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  bottom: 7px;
+}
+.gg-arrow-right::before {
+  width: 16px;
+  height: 2px;
+  bottom: 10px;
+  background: currentColor;
+}
+
+.gg-arrow-left {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+}
+.gg-arrow-left::after,
+.gg-arrow-left::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 3px;
+}
+.gg-arrow-left::after {
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  bottom: 7px;
+}
+.gg-arrow-left::before {
+  width: 16px;
+  height: 2px;
+  bottom: 10px;
+  background: currentColor;
+}
+
+.gg-arrow-down {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+}
+.gg-arrow-down::after,
+.gg-arrow-down::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 4px;
+}
+.gg-arrow-down::after {
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(-45deg);
+  left: 7px;
+}
+.gg-arrow-down::before {
+  width: 2px;
+  height: 16px;
+  left: 10px;
+  background: currentColor;
+}
+.gg-arrow-up {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+}
+.gg-arrow-up::after,
+.gg-arrow-up::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 4px;
+}
+.gg-arrow-up::after {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  left: 7px;
+}
+.gg-arrow-up::before {
+  width: 2px;
+  height: 16px;
+  left: 10px;
+  background: currentColor;
+}
+
+// 編輯區
+.box_edit {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color_main;
+  }
+  ol {
+    padding-left: 32px;
+    ul {
+      padding-left: 20px;
+      list-style: disc;
+    }
+  }
+  li {
+    b {
+      color: $color_main;
+    }
+  }
+  img{
+    height: auto !important;
+  }
+}
