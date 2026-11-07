@@ -7,7 +7,7 @@ body,html{
   margin: auto;
 }
 *{
-  color: $color_grey_1;
+  // color: $color_grey_1;
 }
 img {
   max-width: 100%;
@@ -17,7 +17,7 @@ img {
 
 
 p {
-  color: $color_grey_1;
+  color: #000;
 }
 a{
   text-decoration: unset;
@@ -25,6 +25,8 @@ a{
 
 .main{
   margin-top: 75px;
+
+  padding-top: clamp(16px, 4vw, 60px);
 }
 
 
@@ -33,7 +35,8 @@ a{
 .social-fixed-menu {
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  transform: translateY(-50%);
+  bottom: 50%;
   display: flex;
   flex-direction: column;
   gap: 15px;

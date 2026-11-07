@@ -1,18 +1,14 @@
-function handleCase_h() {
-  let case_h = $(".caseSwiper .swiper-wrapper .swiper-slide").height() * 2 + 40;
-  $(".caseSwiper .swiper-wrapper").height(case_h);
-}
 
-function handlePic_h() {
-  let pic_h = $(".caseSwiper .swiper-wrapper .swiper-slide").width() * 0.8;
-  $(".caseSwiper .swiper-wrapper .swiper-slide .pic").height(pic_h);
-}
 
 const bannerSwiper = new Swiper(".bannerSwiper", {
   pagination: {
     el: ".bannerSwiper .swiper-pagination",
     clickable: true,
   },
+        navigation: {
+          nextEl: '.bannerSwiper .swiper-button-next',
+          prevEl: '.bannerSwiper .swiper-button-prev',
+        },
 });
 
 const bannerSwiper_pr = new Swiper(".bannerSwiper_pr", {
@@ -23,21 +19,6 @@ const bannerSwiper_pr = new Swiper(".bannerSwiper_pr", {
   },
 });
 
-var caseSwiper = new Swiper(".caseSwiper", {
-  slidesPerView: 2,
-  grid: {
-    rows: 2,
-  },
-  spaceBetween: 16,
-  navigation: {
-    nextEl: ".arrow-right",
-    prevEl: ".arrow-left",
-  },
-  pagination: {
-    el: ".caseSwiper .swiper-pagination",
-    clickable: true,
-  },
-});
 
 $(".popup-link").magnificPopup({ type: "image" });
 
