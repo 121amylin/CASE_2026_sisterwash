@@ -58,3 +58,16 @@ a {
     transform: translateY(-4px);
    }
 }
+
+
+// soon
+.soon{
+  font-size: clamp(30px, 8vw, 100px);
+  color: #d4d4d4;
+  text-align: center;
+  font-weight: 600;
+  min-height: 66vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
