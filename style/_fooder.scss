@@ -2,13 +2,14 @@
    background: #001F48;
    color: #fff;
    text-align: center;
-   padding:clamp(10px, 2vw, 20px);
+   padding: clamp(10px, 2vw, 20px);
 
 
  }
 
  .footer-brand {
    margin-bottom: clamp(12px, 1.75vw, 24px);
+
    img {
      width: clamp(140px, 16vw, 240px);
 
@@ -22,19 +23,22 @@
    flex-wrap: wrap;
    margin-bottom: 14px;
 
-   .item{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    @media (max-width: 480px) {
-      width: 100%;
-    }
-    img{
-      width: 14px;
-    }
+   .item {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+
+     @media (max-width: 480px) {
+       width: 100%;
+     }
+
+     img {
+       width: 14px;
+     }
    }
+
    .line {
-    display: inline-block;
+     display: inline-block;
      width: 1px;
      height: 14px;
      background-color: rgba(255, 255, 255, 0.6);
@@ -61,20 +65,12 @@
    position: fixed;
    right: 18px;
    bottom: 18px;
-   width: 46px;
-   height: 46px;
-   border-radius: 50%;
-   background: #345575;
-   color: #fff;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   font-size: 10px;
-   z-index: 8
- }
+   width: clamp(36px, 4.5vw, 72px);
+   height: clamp(36px, 4.5vw, 72px);
+   z-index: 8;
+   transition: all 0.3s linear;
 
- .back-top b {
-   font-size: 19px;
-   line-height: 16px
+   &:hover {
+    transform: translateY(-4px);
+   }
  }

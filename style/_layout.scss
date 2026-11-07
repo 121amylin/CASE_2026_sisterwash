@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Noto+Sans+TC:wght@100..900&display=swap');
-body,html{
+
+body,
+html {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
-  font-style: normal;  
+  font-style: normal;
   max-width: 1920px;
   margin: auto;
 }
-*{
+
+* {
   // color: $color_grey_1;
 }
+
 img {
   max-width: 100%;
   width: auto;
@@ -19,11 +23,12 @@ img {
 p {
   color: #000;
 }
-a{
+
+a {
   text-decoration: unset;
 }
 
-.main{
+.main {
   margin-top: 75px;
 
   padding-top: clamp(16px, 4vw, 60px);
@@ -36,49 +41,20 @@ a{
   position: fixed;
   right: 20px;
   transform: translateY(-50%);
-  bottom: 50%;
+  top: 50%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  z-index: 1050; /* 高於大多數 bootstrap 元件 */
+  gap: 10px;
+  z-index: 1050;
+  /* 高於大多數 bootstrap 元件 */
 }
 
 .social-btn {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #fff;
-  font-size: 24px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  transition: all 0.25s ease;
-}
-
-.social-btn:hover {
-  transform: scale(1.12);
-  color: #fff;
-}
-
-.line {
-  background-color: #00c300;
-    i{
-      color: #fff;
-  }
-}
-
-.instagram {
-
-  background: linear-gradient(
-    45deg,
-    #f58529,
-    #dd2a7b,
-    #8134af,
-    #515bd4
-  );
-  i{
-      color: #fff;
-  }
+  width: clamp(36px, 4.5vw, 72px);
+  height: clamp(36px, 4.5vw, 72px);
+ 
+  transition: all 0.3s linear;
+     &:hover {
+    transform: translateY(-4px);
+   }
 }
