@@ -197,7 +197,7 @@
       overflow-y: auto;
       max-height: 80vh;
       background-color: #fff;
-      border-radius: 32px;
+      border-radius: clamp(10px, 1.75vw, 32px);
       padding: 10px;
     }
 
@@ -374,13 +374,13 @@
 
 #navbarTogglerDemo01 .navbar-nav>.nav-item {
   @media (max-width: 991px) {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 }
 
 #navbarTogglerDemo01 .navbar-nav>li+li {
   @media (max-width: 991px) {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 }
 

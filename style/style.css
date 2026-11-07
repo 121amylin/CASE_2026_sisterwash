@@ -213,7 +213,7 @@ a {
     overflow-y: auto;
     max-height: 80vh;
     background-color: #fff;
-    border-radius: 32px;
+    border-radius: clamp(10px, 1.75vw, 32px);
     padding: 10px;
   }
 }
@@ -366,13 +366,13 @@ a {
 
 @media (max-width: 991px) {
   #navbarTogglerDemo01 .navbar-nav > .nav-item {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 }
 
 @media (max-width: 991px) {
   #navbarTogglerDemo01 .navbar-nav > li + li {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 }
 
@@ -387,14 +387,14 @@ a {
   background: #001F48;
   color: #fff;
   text-align: center;
-  padding: 20px 15px 13px;
+  padding: clamp(10px, 2vw, 20px);
 }
 
 .footer-brand {
   margin-bottom: clamp(12px, 1.75vw, 24px);
 }
 .footer-brand img {
-  width: clamp(200px, 16vw, 260px);
+  width: clamp(140px, 16vw, 240px);
 }
 
 .footer-contact {
@@ -408,6 +408,11 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+@media (max-width: 480px) {
+  .footer-contact .item {
+    width: 100%;
+  }
 }
 .footer-contact .item img {
   width: 14px;
@@ -957,22 +962,35 @@ a {
 #section-tabs {
   display: flex;
   justify-content: center;
-  gap: 22px;
-  margin: 48px 0 22px;
-  padding: 11px;
-  border-radius: 14px;
+  gap: clamp(12px, 1.35vw, 22px);
+  margin: clamp(16px, 3vw, 48px) 0 clamp(16px, 1.5vw, 22px);
+  padding: clamp(6px, 0.75vw, 10px);
+  border-radius: clamp(10px, 0.85vw, 16px);
   background: linear-gradient(100deg, #1179BE, #00a7df);
+}
+@media (max-width: 480px) {
+  #section-tabs {
+    padding: 6px;
+    gap: 6px;
+  }
 }
 #section-tabs .nav-item:focus-visible {
   outline: none;
 }
 #section-tabs .nav-link,
 #section-tabs a {
-  padding: 10px 22px;
-  border-radius: 10px;
+  padding: clamp(6px, 0.75vw, 10px) clamp(12px, 1.35vw, 22px);
+  border-radius: clamp(6px, 0.75vw, 10px);
   color: #fff;
-  font-size: clamp(16px, 1.2vw, 18px);
+  font-size: clamp(16px, 1.25vw, 18px);
   letter-spacing: 1px;
+}
+@media (max-width: 480px) {
+  #section-tabs .nav-link,
+  #section-tabs a {
+    letter-spacing: 0;
+    font-size: 14px;
+  }
 }
 #section-tabs .nav-link.active,
 #section-tabs a.active {
@@ -997,7 +1015,7 @@ a {
 .news-card {
   overflow: hidden;
   border: 1px solid #dedede;
-  border-radius: 23px;
+  border-radius: clamp(10px, 1.5vw, 24px);
   background: #f5f5f5;
   box-shadow: 0 4px 13px rgba(0, 0, 0, 0.06);
   color: #000;
@@ -1048,7 +1066,7 @@ a {
   gap: 8px;
   padding: 5px;
   border: 1px solid #e4e4e4;
-  border-radius: 12px;
+  border-radius: clamp(10px, 1.35vw, 12px);
   margin-bottom: 0;
 }
 
@@ -1074,6 +1092,11 @@ a {
 }
 .page-item:first-child .page-link, .page-item:last-child .page-link {
   background: #eee;
+}
+@media (max-width: 480px) {
+  .page-item:first-child .page-link, .page-item:last-child .page-link {
+    display: none;
+  }
 }
 .page-item.disabled .page-link {
   color: #999;
@@ -1142,33 +1165,55 @@ a {
   align-items: center;
   gap: 10px;
   background: linear-gradient(180deg, #0754b7, #548bd0);
-  border-radius: 30px;
+  border-radius: clamp(10px, 1.5vw, 30px);
   padding: 9px 20px;
   color: #fff;
   font-size: 13px;
   font-weight: 700;
   transition: all 0.3s;
 }
+@media (max-width: 480px) {
+  .phone-pill {
+    padding: 10px 16px;
+    gap: 6px;
+    width: 100%;
+  }
+}
 .phone-pill:hover {
   color: #FFDF74;
   transform: translateY(-2px);
 }
 .phone-pill strong {
-  font-size: 22px;
+  font-size: clamp(18px, 1.5vw, 22px);
   color: #ffd43b;
   letter-spacing: 1px;
+}
+@media (max-width: 480px) {
+  .phone-pill strong {
+    font-size: 16px;
+  }
 }
 .phone-pill .line {
   width: 1px;
   height: 20px;
   background-color: rgba(255, 255, 255, 0.6);
 }
+@media (max-width: 480px) {
+  .phone-pill .line {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .phone-pill svg {
+    display: none;
+  }
+}
 
 .chat-cta {
   background: linear-gradient(100deg, #0754b7, #00a6df);
   color: #fff;
   border-radius: clamp(10px, 1vw, 16px);
-  padding: clamp(12px, 1vw, 16px) clamp(16px, 1.5vw, 22px);
+  padding: clamp(10px, 1vw, 16px) clamp(16px, 1.5vw, 22px);
   font-size: clamp(18px, 1.5vw, 28px);
   display: flex;
   align-items: center;
@@ -1182,6 +1227,12 @@ a {
 @media (max-width: 767.98px) {
   .chat-cta {
     margin: auto;
+  }
+}
+@media (max-width: 480px) {
+  .chat-cta {
+    font-size: 16px;
+    width: 100%;
   }
 }
 .chat-cta:hover {

@@ -2,16 +2,15 @@
    background: #001F48;
    color: #fff;
    text-align: center;
-   padding: 20px 15px 13px;
+   padding:clamp(10px, 2vw, 20px);
 
 
  }
 
  .footer-brand {
-
    margin-bottom: clamp(12px, 1.75vw, 24px);
    img {
-     width: clamp(200px, 16vw, 260px);
+     width: clamp(140px, 16vw, 240px);
 
    }
  }
@@ -27,6 +26,9 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    @media (max-width: 480px) {
+      width: 100%;
+    }
     img{
       width: 14px;
     }
