@@ -35,12 +35,22 @@ a {
     //   margin: 0 auto;
     //   padding: 52px 0 60px;
     background: linear-gradient(180deg, rgba(105, 196, 255, .6) 0%, rgba(235, 246, 254, .4) 75%, #FFFFFF 100%);
-    .container{
-        padding: clamp(16px, 4vw, 60px) ;
+
+    @media (max-width: 575px) {
+        padding: 0;
+    }
+
+    .container {
+        padding: clamp(16px, 4vw, 60px);
         background: #fff;
         border-radius: clamp(10px, 2vw, 36px);
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         margin-bottom: clamp(20px, 4vw, 60px);
+
+        @media (max-width: 575px) {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
     }
 }
 

@@ -1493,12 +1493,23 @@ a {
 .inpage {
   background: linear-gradient(180deg, rgba(105, 196, 255, 0.6) 0%, rgba(235, 246, 254, 0.4) 75%, #FFFFFF 100%);
 }
+@media (max-width: 575px) {
+  .inpage {
+    padding: 0;
+  }
+}
 .inpage .container {
   padding: clamp(16px, 4vw, 60px);
   background: #fff;
   border-radius: clamp(10px, 2vw, 36px);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: clamp(20px, 4vw, 60px);
+}
+@media (max-width: 575px) {
+  .inpage .container {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
 }
 
 .article {
