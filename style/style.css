@@ -11,7 +11,6 @@ body, html {
 img {
   max-width: 100%;
   width: auto;
-  border-radius: 10px;
 }
 
 p {
@@ -385,17 +384,17 @@ a {
 }
 
 .site-footer {
-  background: #001d45;
+  background: #001F48;
   color: #fff;
   text-align: center;
   padding: 20px 15px 13px;
 }
 
 .footer-brand {
-  font-size: 27px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 11px;
+  margin-bottom: clamp(12px, 1.75vw, 24px);
+}
+.footer-brand img {
+  width: clamp(200px, 16vw, 260px);
 }
 
 .footer-contact {
@@ -404,6 +403,20 @@ a {
   gap: 12px;
   flex-wrap: wrap;
   margin-bottom: 14px;
+}
+.footer-contact .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-contact .item img {
+  width: 14px;
+}
+.footer-contact .line {
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-contact span {
