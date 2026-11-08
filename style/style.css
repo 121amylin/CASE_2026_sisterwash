@@ -1262,15 +1262,15 @@ a {
 }
 
 .about {
-  margin-top: 38px;
-  padding: 62px 60px 56px;
+  margin-top: clamp(20px, 3vw, 40px);
+  padding: clamp(20px, 4vw, 60px);
 }
 .about__title {
-  margin: 18px 0 20px;
+  margin: clamp(12px, 1.35vw, 18px) 0 clamp(16px, 1.5vw, 20px);
   font-size: clamp(28px, 2.6vw, 40px);
   font-weight: 800;
   line-height: 1.45;
-  letter-spacing: 0.015em;
+  letter-spacing: 1px;
 }
 .about__title span {
   color: #0874ce;
@@ -1289,7 +1289,7 @@ a {
   color: #111;
   font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 1px;
 }
 .eyebrow span {
   padding: 0 6px;
@@ -1297,21 +1297,60 @@ a {
 .eyebrow--light {
   color: #fff;
 }
+@media (max-width: 425px) {
+  .eyebrow--light {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+}
 
 .services {
-  margin-top: 38px;
+  margin-top: clamp(20px, 3vw, 40px);
 }
 .services__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 991px) {
+  .services__grid {
+    gap: 10px;
+  }
+}
+.services__grid .service-card {
+  width: calc(25% - 14px);
+}
+@media (max-width: 991px) {
+  .services__grid .service-card {
+    width: calc(50% - 14px);
+  }
+}
+@media (max-width: 425px) {
+  .services__grid .service-card {
+    width: 100%;
+  }
+}
+
+.services__grid__3 .service-card {
+  width: calc(33.333% - 14px);
+}
+@media (max-width: 991px) {
+  .services__grid__3 .service-card {
+    width: calc(50% - 14px);
+  }
+}
+@media (max-width: 425px) {
+  .services__grid__3 .service-card {
+    width: 100%;
+  }
 }
 
 .section-heading {
-  margin: 0 0 18px;
+  margin: 0 0 clamp(16px, 1.5vw, 20px);
   color: #080808;
   font-size: clamp(27px, 2.5vw, 36px);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.35;
   text-align: center;
 }
@@ -1321,46 +1360,67 @@ a {
 }
 
 .service-card {
-  min-height: 174px;
-  padding: 28px 30px 24px;
+  padding: clamp(20px, 1.75vw, 28px);
   border-radius: clamp(10px, 1.75vw, 32px);
   background: #f0f0f0;
   box-shadow: 0 12px 26px rgba(20, 60, 90, 0.045);
 }
 .service-card h3 {
-  margin: 0 0 7px;
+  margin: 0 0 6px;
   color: #0874ce;
-  font-size: clamp(18px, 1.5vw, 24px);
+  font-size: clamp(20px, 1.5vw, 24px);
   font-weight: 700;
   line-height: 1.5;
 }
+.service-card h3 span {
+  color: #000;
+}
+.service-card h3 i {
+  display: inline-block;
+  margin: 0 8px;
+  width: 1px;
+  height: clamp(18px, 1.5vw, 24px);
+  background: #858b94;
+  transform: translateY(1px);
+}
+.service-card .step-label {
+  display: inline-flex;
+  min-height: 21px;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 99px;
+  color: #111;
+  background: #fff;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
 .service-card p {
   margin: 0;
-  color: #171717;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .philosophy {
-  margin-top: 40px;
-  padding: 58px 60px 54px;
+  margin-top: clamp(20px, 2.5vw, 40px);
+  padding: clamp(20px, 3.5vw, 60px);
   border-radius: clamp(10px, 1.75vw, 32px);
   color: #fff;
   background: linear-gradient(112deg, #0871c8 0%, #3196e7 57%, #06345c 100%);
   box-shadow: 0 12px 24px rgba(0, 77, 145, 0.12);
 }
 .philosophy__block {
-  margin-top: 24px;
+  margin-top: clamp(12px, 1.5vw, 24px);
 }
 .philosophy__block h2 {
   margin: 0 0 3px;
   color: #fff;
-  font-size: clamp(18px, 1.75vw, 28px);
+  font-size: clamp(20px, 2.25vw, 28px);
   font-weight: 700;
   line-height: 1.5;
 }
 .philosophy__block p {
-  max-width: 1180px;
   margin: 0;
   color: rgba(255, 255, 255, 0.94);
   font-size: 16px;
@@ -1385,11 +1445,23 @@ a {
   transition: transform 0.2s ease, background-color 0.2s ease;
   color: #0874ce;
 }
+@media (max-width: 425px) {
+  .cta-button {
+    font-size: 14px;
+    gap: 6px;
+    padding: 6px 12px;
+  }
+}
 .cta-button:hover {
   transform: translateY(-2px);
 }
 .cta-button span {
   font-size: 18px;
+}
+@media (max-width: 425px) {
+  .cta-button span {
+    font-size: 14px;
+  }
 }
 
 .contact-anchor {
@@ -1650,7 +1722,10 @@ a {
     padding: 0;
   }
 }
-.inpage .container {
+.inpage.short {
+  background: linear-gradient(180deg, rgba(105, 196, 255, 0.6) 0%, rgba(235, 246, 254, 0.4) 32%, #FFFFFF 100%);
+}
+.inpage .container_box {
   padding: clamp(16px, 4vw, 60px);
   background: #fff;
   border-radius: clamp(10px, 2vw, 36px);
@@ -1658,7 +1733,7 @@ a {
   margin-bottom: clamp(20px, 4vw, 60px);
 }
 @media (max-width: 575px) {
-  .inpage .container {
+  .inpage .container_box {
     margin-bottom: 0;
     border-radius: 0;
   }
