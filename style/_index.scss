@@ -391,7 +391,7 @@ $text: #171717;
 }
 
 .poster-box {
-  height: 263px;
+  height: 264px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -400,7 +400,7 @@ $text: #171717;
 
   img {
     height: 100%;
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
   }
 }
