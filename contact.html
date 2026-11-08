@@ -31,7 +31,7 @@
           </button>
         </div>
 
-        <div class="navbar-collapse collapse" id="navbarTogglerDemo01" style="">
+        <div class="navbar-collapse collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav">
             <!-- 多層 -->
             <li class="nav-item dropdown">
@@ -116,8 +116,11 @@
 
   <main class="main">
     <div class="container">
-      <div class="soon">
-        COMMING SOON
+      <section class="about section-panel" aria-labelledby="about-title">
+        <p class="eyebrow">分店查詢 <span>・</span> BRANCH</p>
+      </section>
+      <div class="branch-list" id="branch-list" aria-live="polite">
+        <p class="branch-loading">分店資料載入中⋯</p>
       </div>
     </div>
   </main>
@@ -125,7 +128,7 @@
 
 
 
-    <div class="social-fixed-menu">
+  <div class="social-fixed-menu">
     <a href="tel:0908115899" target="_blank" class="social-btn">
       <img src="./images/btn_message.png" alt="">
     </a>
