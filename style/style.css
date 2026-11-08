@@ -1959,21 +1959,20 @@ a {
 }
 .region__title small {
   color: #333;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
 }
 .region__stores {
   display: grid;
-  gap: 5px;
+  gap: 6px;
 }
 
 .store-card {
   display: grid;
-  grid-template-columns: 130px minmax(0, 1fr) 96px;
+  grid-template-columns: 170px minmax(0, 1fr) 96px;
   align-items: center;
-  min-height: 74px;
-  padding: 9px 12px;
-  border-radius: 13px;
+  padding: clamp(12px, 1.25vw, 16px) clamp(16px, 1.5vw, 24px);
+  border-radius: 16px;
   background: #eeeeee;
 }
 @media (max-width: 600px) {
@@ -1987,7 +1986,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 5px;
+  gap: 6px;
   padding: 0 12px 0 2px;
   border-right: 1px solid #dedede;
 }
@@ -2001,7 +2000,7 @@ a {
 .store-card__name h3 {
   margin: 0;
   color: #111;
-  font-size: 14px;
+  font-size: clamp(18px, 1.5vw, 20px);
   font-weight: 700;
   line-height: 1.45;
 }
@@ -2020,23 +2019,23 @@ a {
 .store-card__line {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   min-width: 0;
   margin: 0;
   color: #171717;
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.6;
 }
 .store-card__icon {
   display: inline-flex;
-  flex: 0 0 13px;
-  width: 13px;
-  height: 15px;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
   color: #1179BE;
 }
 .store-card__icon svg {
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
@@ -2064,9 +2063,9 @@ a {
   min-height: 20px;
   padding: 2px 8px;
   border-radius: 20px;
-  color: #222;
+  color: #000;
   background: #fff;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
   position: relative;
@@ -2087,13 +2086,11 @@ a {
   justify-content: center;
   justify-self: end;
   gap: 4px;
-  min-width: 82px;
-  min-height: 34px;
   padding: 6px 9px;
   border-radius: 999px;
   color: #fff;
   background: #006493;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
@@ -2105,12 +2102,12 @@ a {
 }
 .map-button__icon {
   display: inline-flex;
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
 }
 .map-button__icon svg {
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
