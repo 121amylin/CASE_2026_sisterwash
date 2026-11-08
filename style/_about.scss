@@ -1,6 +1,6 @@
 // SiSter brand landing page
-$blue: #0874ce;
-$blue-deep: #06365f;
+$blue: $color_main;;
+$footer-color: #06365f;
 $text: #101828;
 $muted: #333;
 $panel: #f0f0f0;
@@ -226,7 +226,7 @@ $container: 1448px;
     margin-top: 24px;
     padding: 10px 20px;
     border-radius: 999px;
-    color: $blue-deep;
+    color: $footer-color;
     background: #ffdc57;
     font-size: 16px;
     font-weight: 700;
