@@ -1,5 +1,6 @@
 // SiSter brand landing page
-$blue: $color_main;;
+$blue: $color_main;
+;
 $footer-color: #06365f;
 $text: #101828;
 $muted: #333;
@@ -11,6 +12,10 @@ $container: 1448px;
     overflow: hidden;
     width: 100%;
     border-radius: clamp(10px, 1.75vw, 32px);
+
+    @media (max-width:575px) {
+        border-radius: 0;
+    }
 
     &__image {
         display: block;

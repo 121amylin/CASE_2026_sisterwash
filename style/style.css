@@ -1252,6 +1252,11 @@ a {
   width: 100%;
   border-radius: clamp(10px, 1.75vw, 32px);
 }
+@media (max-width: 575px) {
+  .inbanner {
+    border-radius: 0;
+  }
+}
 .inbanner__image {
   display: block;
   width: 100%;
