@@ -1,0 +1,37 @@
+.why-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 16px;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px 6px 8px;
+        border-radius: 30px;
+        background: #f0f1f2;
+        color: #273044;
+        font-size: 16px;
+        font-weight: 700;
+        white-space: nowrap;
+
+        span {
+            width: clamp(32px,2.5vw,48px);
+            height: clamp(32px,2.5vw,48px);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 clamp(32px,2.5vw,48px);
+            border-radius: 50%;
+            color: #fff;
+            background: $color_main;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}

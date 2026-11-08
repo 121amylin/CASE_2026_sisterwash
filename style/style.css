@@ -1362,7 +1362,7 @@ a {
 }
 
 .service-card {
-  padding: clamp(20px, 1.75vw, 28px);
+  padding: clamp(22px, 1.75vw, 28px);
   border-radius: clamp(10px, 1.75vw, 32px);
   background: #f0f0f0;
   box-shadow: 0 12px 26px rgba(20, 60, 90, 0.045);
@@ -1890,4 +1890,39 @@ a {
     min-height: 44px;
     padding-inline: 22px;
   }
+}
+.why-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 16px;
+  padding: 0;
+  list-style: none;
+}
+.why-list li {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px 6px 8px;
+  border-radius: 30px;
+  background: #f0f1f2;
+  color: #273044;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.why-list li span {
+  width: clamp(32px, 2.5vw, 48px);
+  height: clamp(32px, 2.5vw, 48px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 clamp(32px, 2.5vw, 48px);
+  border-radius: 50%;
+  color: #fff;
+  background: #1179BE;
+  font-size: 16px;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
