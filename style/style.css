@@ -1024,14 +1024,13 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
   background: #fff;
 }
 .poster-box img {
   height: 100%;
   max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .card-copy {
