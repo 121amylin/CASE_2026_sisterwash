@@ -122,10 +122,72 @@
     </div>
     <div class="container container_box">
 
-      <h2 class="section-heading " id="services-title">分店查詢 <span>BRANCH</span></h2>
-      <div class="branch-list" id="branch-list" aria-live="polite">
-        <p class="branch-loading">分店資料載入中⋯</p>
+      <h2 class="section-heading " id="services-title">填寫諮詢表單 <span>CONTACT US</span></h2>
+
+
+      <div class="contact-intro">
+        <div class="contact-intro__text">
+          <p>若您有任何洗思特自助洗衣加盟的疑問，歡迎與我們聯絡，或直接 <a href="#">LINE：sister688</a> 諮詢～</p>
+          <p>加盟專線 <a href="tel:0908115899">0908-115-899</a></p>
+        </div>
+        <p class="required-note"><span>*</span> 標記為必填欄位</p>
       </div>
+
+
+      <form class="contact-form">
+        <div class="form-row">
+          <label for="contact-name"><span>*</span> 聯絡人：</label>
+          <input id="contact-name" name="contact-name" type="text" placeholder="請輸入您的姓名／稱謂">
+        </div>
+
+        <div class="form-row">
+          <label for="phone"><span>*</span> 聯絡電話：</label>
+          <input id="phone" name="phone" type="tel" placeholder="例：02-23456789 或 04-xxxxxxx">
+        </div>
+
+        <div class="form-row">
+          <label for="mobile"><span>*</span> 行動電話：</label>
+          <input id="mobile" name="mobile" type="tel" placeholder="例：0912-345-678">
+        </div>
+
+        <div class="form-row">
+          <label for="city"><span>*</span> 所在縣市：</label>
+          <input id="city" name="city" type="text" placeholder="例：台中市">
+        </div>
+
+        <div class="form-row">
+          <label for="email"><span>*</span> 電子信箱：</label>
+          <input id="email" name="email" type="email" placeholder="例：name@example.com">
+        </div>
+
+        <div class="form-row">
+          <label for="contact-time"><span>*</span> 方便聯絡時間：</label>
+          <div class="select-wrap">
+            <select id="contact-time" name="contact-time">
+              <option value="anytime">隨時</option>
+              <option value="morning">上午</option>
+              <option value="afternoon">下午</option>
+              <option value="evening">晚上</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row form-row--message">
+          <label for="message"><span>*</span> 聯絡內容：</label>
+          <textarea id="message" name="message" placeholder="請詳細描述您的需求（如預計開店地點、店面坪數、預算規劃、已有店面或需尋找店面等）"></textarea>
+        </div>
+
+        <div class="form-row form-row--captcha">
+          <label for="captcha"><span>*</span> 驗證碼：</label>
+          <input id="captcha" name="captcha" type="text" placeholder="請輸入驗證碼">
+          <div class="captcha-code" aria-label="驗證碼圖片">7 N u 5 K</div>
+          <a class="captcha-refresh" href="#" aria-label="重新產生驗證碼">↻ <span>[重新產生]</span></a>
+        </div>
+
+        <div class="form-actions">
+          <button type="button">確認送出諮詢 <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
     </div>
   </main>
 
