@@ -309,7 +309,7 @@ $text: #171717;
   display: flex;
   justify-content: center;
   gap: clamp(12px, 1.35vw, 22px);
-  margin: clamp(16px, 3vw, 48px) 0 clamp(16px, 1.5vw, 22px) ;
+  margin: clamp(16px, 3vw, 48px) 0 clamp(16px, 1.5vw, 22px);
   padding: clamp(6px, 0.75vw, 10px);
   border-radius: clamp(10px, 0.85vw, 16px);
   background: linear-gradient(100deg, $blue, $cyan);
@@ -317,6 +317,11 @@ $text: #171717;
   @media (max-width:480px) {
     padding: 6px;
     gap: 6px;
+  }
+
+  @media (max-width:375px) {
+    padding: 4px;
+    gap: 3px;
   }
 
   .nav-item {
@@ -336,6 +341,11 @@ $text: #171717;
     @media (max-width:480px) {
       letter-spacing: 0;
       font-size: 14px;
+    }
+
+    @media (max-width:375px) {
+      padding: 4px 6px;
+      font-size: 13px;
     }
 
     &.active {
@@ -367,10 +377,11 @@ $text: #171717;
   background: #f5f5f5;
   box-shadow: 0 4px 13px rgba(0, 0, 0, .06);
   color: #000;
-  &:hover{
-      .tit{
-        corlor:$blue;
-      }
+
+  &:hover {
+    .tit {
+      corlor: $blue;
+    }
   }
 
   p {

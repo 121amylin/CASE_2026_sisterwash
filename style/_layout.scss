@@ -46,22 +46,30 @@ a {
   flex-direction: column;
   gap: 10px;
   z-index: 1050;
-  /* 高於大多數 bootstrap 元件 */
+
+  @media (max-width:991px) {
+    right: 10px;
+  }
+
+  @media (max-width:480px) {
+    right: 6px;
+  }
 }
 
 .social-btn {
   width: clamp(36px, 4.5vw, 72px);
   height: clamp(36px, 4.5vw, 72px);
- 
+
   transition: all 0.3s linear;
-     &:hover {
+
+  &:hover {
     transform: translateY(-4px);
-   }
+  }
 }
 
 
 // soon
-.soon{
+.soon {
   font-size: clamp(30px, 8vw, 100px);
   color: #d4d4d4;
   text-align: center;

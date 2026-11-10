@@ -90,16 +90,19 @@ $container: 1448px;
 
 
         @media (max-width:991px) {
+            justify-content: space-between;
             gap: 10px;
         }
 
 
 
         .service-card {
-            width: calc(25% - 14px);
+            width: calc(25% - 15px);
+
 
             @media (max-width:991px) {
                 width: calc(50% - 14px);
+                flex-grow: 1;
             }
 
             @media (max-width:425px) {

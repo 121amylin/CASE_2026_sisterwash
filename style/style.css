@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lugrasimo&family=Noto+Sans+TC:wght@100..900&display=swap");
 body,
 html {
@@ -36,7 +35,16 @@ a {
   flex-direction: column;
   gap: 10px;
   z-index: 1050;
-  /* 高於大多數 bootstrap 元件 */
+}
+@media (max-width: 991px) {
+  .social-fixed-menu {
+    right: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .social-fixed-menu {
+    right: 6px;
+  }
 }
 
 .social-btn {
@@ -137,7 +145,6 @@ a {
 #navbarTogglerDemo01 .dropdown-menu {
   border: none;
   display: none;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 992px) {
   #navbarTogglerDemo01 .dropdown-menu {
@@ -145,6 +152,7 @@ a {
     transform: translateX(-50%);
     left: 50%;
     border-radius: 24px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   }
 }
 #navbarTogglerDemo01 .dropdown-menu::before {
@@ -955,6 +963,12 @@ a {
     gap: 6px;
   }
 }
+@media (max-width: 375px) {
+  #section-tabs {
+    padding: 4px;
+    gap: 3px;
+  }
+}
 #section-tabs .nav-item:focus-visible {
   outline: none;
 }
@@ -971,6 +985,13 @@ a {
   #section-tabs a {
     letter-spacing: 0;
     font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  #section-tabs .nav-link,
+  #section-tabs a {
+    padding: 4px 6px;
+    font-size: 13px;
   }
 }
 #section-tabs .nav-link.active,
@@ -1322,15 +1343,17 @@ a {
 }
 @media (max-width: 991px) {
   .services__grid {
+    justify-content: space-between;
     gap: 10px;
   }
 }
 .services__grid .service-card {
-  width: calc(25% - 14px);
+  width: calc(25% - 15px);
 }
 @media (max-width: 991px) {
   .services__grid .service-card {
     width: calc(50% - 14px);
+    flex-grow: 1;
   }
 }
 @media (max-width: 425px) {
@@ -1969,7 +1992,7 @@ a {
 
 .store-card {
   display: grid;
-  grid-template-columns: 170px minmax(0, 1fr) 96px;
+  grid-template-columns: 180px minmax(0, 1fr) 96px;
   align-items: center;
   padding: clamp(12px, 1.25vw, 16px) clamp(16px, 1.5vw, 24px);
   border-radius: 16px;
@@ -2086,11 +2109,11 @@ a {
   justify-content: center;
   justify-self: end;
   gap: 4px;
-  padding: 6px 9px;
+  padding: 4px 14px;
   border-radius: 999px;
   color: #fff;
   background: #006493;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
@@ -2194,7 +2217,7 @@ a {
 
 .form-row {
   display: grid;
-  grid-template-columns: 105px minmax(0, 1fr);
+  grid-template-columns: 165px minmax(0, 1fr);
   align-items: center;
   gap: 0;
   margin-bottom: 19px;
@@ -2203,7 +2226,7 @@ a {
   padding-right: 16px;
   text-align: right;
   white-space: nowrap;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 .form-row > label span {
@@ -2219,7 +2242,7 @@ a {
   color: #222;
   background: #ededed;
   font: inherit;
-  font-size: 12px;
+  font-size: 16px;
 }
 .form-row input::-moz-placeholder, .form-row select::-moz-placeholder, .form-row textarea::-moz-placeholder {
   color: #333;
@@ -2277,7 +2300,7 @@ a {
 }
 
 .form-row--captcha {
-  grid-template-columns: 105px 120px 108px auto;
+  grid-template-columns: 165px 160px 136px auto;
   -moz-column-gap: 10px;
        column-gap: 10px;
   margin-bottom: 31px;
@@ -2286,7 +2309,7 @@ a {
   padding-right: 16px;
 }
 .form-row--captcha input {
-  height: 41px;
+  height: 42px;
 }
 
 .captcha-code {

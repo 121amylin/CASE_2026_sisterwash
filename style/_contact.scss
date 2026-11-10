@@ -79,7 +79,7 @@
 
 .form-row {
     display: grid;
-    grid-template-columns: 105px minmax(0, 1fr);
+    grid-template-columns: 165px minmax(0, 1fr);
     align-items: center;
     gap: 0;
     margin-bottom: 19px;
@@ -88,7 +88,7 @@
         padding-right: 16px;
         text-align: right;
         white-space: nowrap;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
 
         span {
@@ -106,7 +106,7 @@
         color: #222;
         background: #ededed;
         font: inherit;
-        font-size: 12px;
+        font-size: 16px;
 
         &::placeholder {
             color: $muted;
@@ -163,7 +163,7 @@
 }
 
 .form-row--captcha {
-    grid-template-columns: 105px 120px 108px auto;
+    grid-template-columns: 165px 160px 136px auto;
     column-gap: 10px;
     margin-bottom: 31px;
 
@@ -172,7 +172,7 @@
     }
 
     input {
-        height: 41px;
+        height: 42px;
     }
 }
 
