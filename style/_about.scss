@@ -1,0 +1,262 @@
+// SiSter brand landing page
+$blue: $color_main;
+;
+$footer-color: #06365f;
+$text: #101828;
+$muted: #333;
+$panel: #f0f0f0;
+$container: 1448px;
+
+
+.inbanner {
+    overflow: hidden;
+    width: 100%;
+    border-radius: clamp(10px, 1.75vw, 32px);
+
+    @media (max-width:575px) {
+        border-radius: 0;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.section-panel {
+    border-radius: clamp(10px, 1.75vw, 32px);
+    background: $panel;
+}
+
+.about {
+    margin-top: clamp(20px, 3vw, 40px);
+    padding: clamp(20px, 4vw, 60px);
+
+    &__title {
+        margin: clamp(12px, 1.35vw, 18px) 0 clamp(16px, 1.5vw, 20px);
+        font-size: clamp(28px, 2.6vw, 40px);
+        font-weight: 800;
+        line-height: 1.45;
+        letter-spacing: 1px;
+
+        span {
+            color: $blue;
+        }
+    }
+
+    &__content {
+        color: #111;
+        font-size: clamp(17px, 1.6vw, 20px);
+        line-height: 1.75;
+
+
+    }
+}
+
+.eyebrow {
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 3px;
+    border-bottom: 1px solid currentColor;
+    color: #111;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    span {
+        padding: 0 6px;
+    }
+
+    &--light {
+        color: #fff;
+
+        @media (max-width:425px) {
+            font-size: 14px;
+            letter-spacing: 0;
+        }
+    }
+}
+
+.services {
+    margin-top: clamp(20px, 3vw, 40px);
+
+    &__grid {
+        display: flex;
+        // grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+        @media (max-width:991px) {
+            gap: 10px;
+        }
+
+
+
+        .service-card {
+            width: calc(25% - 14px);
+
+            @media (max-width:991px) {
+                width: calc(50% - 14px);
+            }
+
+            @media (max-width:425px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.services__grid__3 {
+
+    //  grid-template-columns: repeat(3, minmax(0, 1fr));
+    .service-card {
+        width: calc(33.333% - 14px);
+
+        @media (max-width:991px) {
+            width: calc(50% - 14px);
+        }
+
+        @media (max-width:425px) {
+            width: 100%;
+        }
+    }
+
+}
+
+.section-heading {
+    margin: 0 0 clamp(16px, 1.5vw, 20px);
+    color: #080808;
+    font-size: clamp(27px, 2.5vw, 36px);
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+
+    span {
+        color: $blue;
+        font-weight: 500;
+    }
+}
+
+.service-card {
+    // min-height: 174px;
+    padding: clamp(22px, 1.75vw, 28px);
+    border-radius: clamp(10px, 1.75vw, 32px);
+    background: $panel;
+    box-shadow: 0 12px 26px rgba(20, 60, 90, .045);
+
+    h3 {
+        margin: 0 0 6px;
+        color: $blue;
+        font-size: clamp(20px, 1.5vw, 24px);
+        font-weight: 700;
+        line-height: 1.5;
+
+        span {
+            color: #000;
+        }
+
+        i {
+            display: inline-block;
+            margin: 0 8px;
+            width: 1px;
+            height: clamp(18px, 1.5vw, 24px);
+            background: #858b94;
+            transform: translateY(1px);
+        }
+
+
+    }
+
+    .step-label {
+        display: inline-flex;
+        min-height: 21px;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: 99px;
+        color: #111;
+        background: #fff;
+        font-size: clamp(14px, 1vw, 16px);
+        line-height: 1;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+.philosophy {
+    margin-top: clamp(20px, 2.5vw, 40px);
+    padding: clamp(20px, 3.5vw, 60px);
+    border-radius: clamp(10px, 1.75vw, 32px);
+    color: #fff;
+    background: linear-gradient(112deg, #0871c8 0%, #3196e7 57%, #06345c 100%);
+    box-shadow: 0 12px 24px rgba(0, 77, 145, .12);
+
+    &__block {
+        margin-top: clamp(12px, 1.5vw, 24px);
+
+        h2 {
+            margin: 0 0 3px;
+            color: #fff;
+            font-size: clamp(20px, 2.25vw, 28px);
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        p {
+            margin: 0;
+            color: rgba(255, 255, 255, .94);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        &--cta {
+            margin-top: 24px;
+        }
+    }
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    margin-top: 24px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    color: $footer-color;
+    background: #ffdc57;
+    font-size: 16px;
+    font-weight: 700;
+    transition: transform .2s ease, background-color .2s ease;
+    color: $blue;
+
+    @media (max-width:425px) {
+        font-size: 14px;
+        gap: 6px;
+        padding: 6px 12px;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    span {
+        font-size: 18px;
+
+        @media (max-width:425px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.contact-anchor {
+    height: 1px;
+}

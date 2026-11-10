@@ -40,7 +40,11 @@ a {
         padding: 0;
     }
 
-    .container {
+    &.short{
+          background: linear-gradient(180deg, rgba(105, 196, 255, .6) 0%, rgba(235, 246, 254, .4) 32%, #FFFFFF 100%);
+    }
+
+    .container_box {
         padding: clamp(16px, 4vw, 60px);
         background: #fff;
         border-radius: clamp(10px, 2vw, 36px);

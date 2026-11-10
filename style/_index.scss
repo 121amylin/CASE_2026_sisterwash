@@ -367,6 +367,11 @@ $text: #171717;
   background: #f5f5f5;
   box-shadow: 0 4px 13px rgba(0, 0, 0, .06);
   color: #000;
+  &:hover{
+      .tit{
+        corlor:$blue;
+      }
+  }
 
   p {
     margin-bottom: 0;
@@ -386,17 +391,17 @@ $text: #171717;
 }
 
 .poster-box {
-  height: 263px;
+  height: 264px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  // padding: 12px;
   background: #fff;
 
   img {
     height: 100%;
-    max-width: 100%;
-    object-fit: contain;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
